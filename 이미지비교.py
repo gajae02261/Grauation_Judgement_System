@@ -1,9 +1,9 @@
 import cv2
 
 def calculate_image_similarity(image1_path, image2_path):
-    # 이미지 파일을 그레이스케일로 로드
-    image1 = cv2.imread(image1_path, 0)
-    image2 = cv2.imread(image2_path, 0)
+    # 이미지 파일을 로드
+    image1 = cv2.imread(image1_path)
+    image2 = cv2.imread(image2_path)
 
     # 이미지의 히스토그램 계산
     hist1 = cv2.calcHist([image1], [0], None, [256], [0, 256])
